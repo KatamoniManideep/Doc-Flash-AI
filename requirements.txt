@@ -1,0 +1,5 @@
+genanki==0.13.1
+pydantic==2.7.4
+streamlit==1.36.0
+google-genai
+python-dotenv==1.0.1

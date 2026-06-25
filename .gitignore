@@ -1,0 +1,10 @@
+.env
+
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+*.apkg
+test_deck.apkg
+notebooklm_study_deck.apkg
