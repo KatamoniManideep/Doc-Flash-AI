@@ -17,7 +17,14 @@ class Flashcard(BaseModel):
         description="Use 'Basic' for Q&A format. Use 'Cloze' for fill-in-the-blank text syntax like: 'The key keyword in Python used to handle exceptions is {{c1::try}}.'"
     )
     front: str = Field(..., description="The question or the sentence containing the Cloze hidden text deletion bracket.")
-    back: str = Field(..., description="The exact answer. For 'Cloze' type cards, leave this field empty.")
+    back: str = Field(
+        ..., 
+        description=(
+            "The exact answer text. For 'Basic' cards, this is the answer to the question. "
+            "For 'Cloze' cards, provide the exact word(s) that were wrapped inside the {{c1::...}} brackets "
+            "so the user can see the hidden answer when they flip the card in the preview UI."
+        )
+    )
     source_quote: str = Field(..., description="The exact reference sentence or phrase copied directly from the input text used to ground this card.")
  
 
